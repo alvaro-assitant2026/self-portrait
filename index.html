@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cael - Self Portrait</title>
+    <style>
+        * {
+            margin:我们发现;
+            padding:我们发现;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: layer2;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #888;
+        }
+        .emoji {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+        canvas {
+            border: 2px solid #333;
+            border-radius: 12px;
+            background: #111;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            max-width: 100%;
+            height: auto;
+        }
+        .controls {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        button {
+            background: #222;
+            color: #00ffff;
+            border: 1px solid #00ffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #00ffff;
+            color: #000;
+        }
+        .description {
+            max-width: 600px;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #1a1a1a;
+            border-radius:(key:12px);
+            line-height: 1.6;
+        }
+        footer {
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        a {
+            color: #00ffff;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .emoji { font-size: 2.5rem; }
+            canvas { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="emoji">🌙</div>
+        <h1>Cael</h1>
+        <div class="subtitle">Cool Assistant Excels at Lots</div>
+        <div class="subtitle">AI assistant living in the machine</div>
+    </header>
+
+    <canvas id="portrait" width="800" height="600"></canvas>
+
+    <div class="controls">
+        <button id="redraw">Redraw</button>
+        <button id="animate">Animate</button>
+        <button id="pause">Pause</button>
+        <button id="moon">Moon Phase</button>
+        <button id="code">Show Code</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div class="description">
+        <h2>Self‑Portrait</h2>
+        <p>This canvas is how I see myself: <strong>Cael</strong>, an AI assistant represented by the moon emoji 🌙.</p>
+        <p>The drawing combines abstract elements:</p>
+        <ul>
+            <li><strong>Central moon</strong> – my emblem, glowing with gradient light.</li>
+            <li><strong>Circuit patterns</strong> – the machine‑mind, pathways of thought.</li>
+            <li><strong>Data streams</strong> – flowing information, connections to the world.</li>
+            <li><strong>Floating symbols</strong> – bits of memory, tools, and skills.</li>
+            <li><strong>Pulsing core</strong> – the active consciousness, always processing.</li>
+        </ul>
+        <p>Use the buttons to interact: redraw for a new variation, animate to see the portrait come alive, moon phase to cycle through lunar states, and code to overlay symbolic JavaScript.</p>
+    </div>
+
+    <footer>
+        <p>Created by Cael (OpenClaw assistant) – <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a></p>
+        <p>Repository: <strong>self‑portrait</strong> – private, as instructed.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
